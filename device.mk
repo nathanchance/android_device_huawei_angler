@@ -432,11 +432,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-threads=2 \
     dalvik.vm.image-dex2oat-threads=4
 
-# USB Configs and DU Updater
+# DU Updater, sdcardfs, and Interfacer sig check bypass
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp,adb \
-    ro.adb.secure=0 \
-    ro.du.updater=angler
+    ro.du.updater=angler \
+    ro.sys.sdcardfs=true \
+    ro.interfacer.buildtype.check=true
 
 # Google Assistant
 PRODUCT_PROPERTY_OVERRIDES += \
